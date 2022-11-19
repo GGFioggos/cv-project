@@ -1,39 +1,37 @@
 import React, { Component } from 'react';
 import InputField from './InputField';
 
-class ExperienceInputGroup extends Component {
+class EducationInputGroup extends Component {
+    constructor() {
+        super();
+    }
+
     render() {
         return (
             <div>
                 <InputField
-                    title="Position"
-                    inputid="position"
+                    title="University Name"
+                    inputid="universityname"
                     type="text"
                 ></InputField>
                 <InputField
-                    title="Company"
-                    inputid="company"
+                    title="Course / Program"
+                    inputid="course"
                     type="text"
                 ></InputField>
                 <InputField
-                    title="Position"
-                    inputid="position"
-                    type="text"
-                ></InputField>
-                <InputField
-                    title="Start date"
+                    title="Start Date"
                     inputid="startdate"
                     type="text"
                 ></InputField>
                 <InputField
-                    title="End date"
+                    title="End Date"
                     inputid="enddate"
                     type="text"
                 ></InputField>
-                <textarea placeholder="Description"></textarea>
             </div>
         );
     }
 }
 
-export default ExperienceInputGroup;
+export default EducationInputGroup;
