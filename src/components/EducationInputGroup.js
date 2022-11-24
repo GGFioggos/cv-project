@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import InputField from './InputField';
 
 class EducationInputGroup extends Component {
-    constructor() {
-        super();
-    }
-
     render() {
         return (
             <div>

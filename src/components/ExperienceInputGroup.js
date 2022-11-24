@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import InputField from './InputField';
 
 class ExperienceInputGroup extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    onchange() {}
+
     render() {
         return (
             <div>
@@ -13,11 +19,6 @@ class ExperienceInputGroup extends Component {
                 <InputField
                     title="Company"
                     inputid="company"
-                    type="text"
-                ></InputField>
-                <InputField
-                    title="Position"
-                    inputid="position"
                     type="text"
                 ></InputField>
                 <InputField
