@@ -2,22 +2,25 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import CvForm from './components/CvForm';
+import CvView from './components/CvView';
+import './styles/App.css';
 
 class App extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             personalDetails: {
-                name: '',
-                last_name: '',
-                phone: '',
-                email: '',
+                firstname: '',
+                lastname: '',
+                title: '',
                 location: '',
+                phonenumber: '',
+                email: '',
+                description: '',
             },
-            description: '',
-            experience: [],
-            education: [],
+            experience: [{}],
+            education: [{}],
         };
     }
 
@@ -25,7 +28,18 @@ class App extends Component {
         return (
             <div>
                 <Header></Header>
-                <CvForm experience={this.state.experience}></CvForm>
+                <div className="container">
+                    <CvForm
+                        experience={this.state.experience}
+                        education={this.state.education}
+                        personalDetails={this.state.personalDetails}
+                    ></CvForm>
+                    <CvView
+                        personalDetails={this.state.personalDetails}
+                        experience={this.state.experience}
+                        education={this.state.education}
+                    ></CvView>
+                </div>
             </div>
         );
     }
